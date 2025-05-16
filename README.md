@@ -230,7 +230,9 @@ After the student enters the OTP sent to their email address, they are redirecte
 
 <https://globaltraining.app.axcelerate.com/api/contact/enrolments{contactId}>
 
-### Example Response - Student registered course details
+<details>
+
+<summary>Example Response - Student registered course details</summary>
 
     [
         {
@@ -514,11 +516,15 @@ After the student enters the OTP sent to their email address, they are redirecte
             "OUTCOMECODE": "85"
         }
     ]
+    
+</details>
+
 
 Selected fields are used to construct the course list, along with the corresponding units for each course.
 All unit information is mapped to its respective course and organised under that specific course entry.
 
-Course object along with registered units information
+<details>
+<summary>Course object along with registered units information</summary>
 
     {
         courseId: ENROLID,
@@ -534,6 +540,7 @@ Course object along with registered units information
             }
         ]
     }
+</details>
 
 Upon selecting a course, the associated units within that course are displayed.
 
@@ -549,7 +556,9 @@ If the chat option is chosen, the system retrieves the learning resources linked
 
  QUERY PARAMS: contactId
 
-### Example Response - Resources available in a unit
+ <details>
+
+<summary>Example Response - Resources available in a unit</summary>
 
     {
         "DIPLOMAS": [],
@@ -1791,6 +1800,8 @@ If the chat option is chosen, the system retrieves the learning resources linked
             }
         ]
     }
+</details>
+
 
 Based on the provided data, a specific unit is identified by matching its ID within the UNITS array. Once the relevant unit object is retrieved, its RESOURCES array is accessed and processes only the supported file types—namely, PDF (.pdf), Microsoft Word (.doc), and Word Open XML (.docx)—for embedding purposes.
 
