@@ -20,7 +20,9 @@ When the student enters their contact ID, a unique OTP is generated and sent to 
 
 <https://globaltraining.app.axcelerate.com/api/contact/{contactId}>
 
-### Example Response - Student Details
+<details>
+
+<summary>Example Response - Student Details</summary>
 
     {
         "CONTACTID": 14149898,
@@ -205,6 +207,7 @@ When the student enters their contact ID, a unique OTP is generated and sent to 
         "PHOTO": "//fs.axcelerate.com.au/images/81990022/students/14149898.",
         "DOMAINIDS": []
     }
+</details>
 
 ## LIST STUDENT REGISTERED COURSE
 
