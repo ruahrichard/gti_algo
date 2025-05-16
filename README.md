@@ -4,6 +4,19 @@ This document outlines the process for how a student can initiate a chat for a s
 
 We utilised the GTI reference APIs to retrieve the necessary information required to initiate the chat session.
 
+## Table of Contents
+
+1. [Reference Link](#reference-link)
+2. [Student Login](#student-login)
+   - [URL to get student details](#url-to-get-student-details)
+   - [Example Response - Student Details](#example-response---student-details)
+3. [Student Registered Course](#student-registered-course)
+   - [URL to get student registered course details](#url-to-get-student-registered-course-details)
+   - [Example Response - Student registered course details](#example-response---student-registered-course-details)
+4. [List Resources of a Unit](#list-resources-of-a-selected-unit)
+   - [URL to get resources based on unit id](#url-to-get-resources-based-on-unit-id)
+   - [Example Response - Resources available in a unit](#example-response---resources-available-in-a-unit)
+
 ## Reference Link
 
 <https://app.axcelerate.com/apidocs/home/index>
