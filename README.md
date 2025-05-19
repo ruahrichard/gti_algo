@@ -1,4 +1,4 @@
-# GTI - JIT STUDENT FLOW TO INITIATE CHAT PROCESS
+# GTI - JIT Student flow to initiate chat
 
 This document outlines the process for how a student can initiate a chat for a specific unit they enrolled in under GTI.
 
@@ -6,7 +6,7 @@ We utilised the GTI reference APIs to retrieve the necessary information require
 
 ## Table of Contents
 
-1. [Reference Link](#reference-link)
+1. [API Reference Link](#reference-link)
 2. [Student Login](#student-login)
    - [URL to get student details](#url-to-get-student-details)
    - [Example Response - Student Details](#example-response---student-details)
@@ -17,11 +17,11 @@ We utilised the GTI reference APIs to retrieve the necessary information require
    - [URL to get resources based on unit id](#url-to-get-resources-based-on-unit-id)
    - [Example Response - Resources available in a unit](#example-response---resources-available-in-a-unit)
 
-## Reference Link
+## API Reference Link
 
 <https://app.axcelerate.com/apidocs/home/index>
 
-## STUDENT LOGIN
+## Student login
 
 Students can log in using their Contact ID (e.g., 14149898).
 
@@ -220,9 +220,10 @@ When the student enters their contact ID, a unique OTP is generated and sent to 
         "PHOTO": "//fs.axcelerate.com.au/images/81990022/students/14149898.",
         "DOMAINIDS": []
     }
+
 </details>
 
-## LIST STUDENT REGISTERED COURSE
+## List student registered courses
 
 After the student enters the OTP sent to their email address, they are redirected to the dashboard, where a list of their registered courses is displayed.
 
@@ -516,9 +517,8 @@ After the student enters the OTP sent to their email address, they are redirecte
             "OUTCOMECODE": "85"
         }
     ]
-    
-</details>
 
+</details>
 
 Selected fields are used to construct the course list, along with the corresponding units for each course.
 All unit information is mapped to its respective course and organised under that specific course entry.
@@ -540,13 +540,14 @@ All unit information is mapped to its respective course and organised under that
             }
         ]
     }
+
 </details>
 
 Upon selecting a course, the associated units within that course are displayed.
 
 Students can then select a unit to either start a chat session or begin an assessment.
 
-## LIST RESOURCES OF A SELECTED UNIT
+## List resources of a selected unit
 
 If the chat option is chosen, the system retrieves the learning resources linked to the selected unit, generates embeddings from those resources, and stores them in the database to enable efficient and contextual responses during the chat.
 
@@ -554,7 +555,7 @@ If the chat option is chosen, the system retrieves the learning resources linked
 
 <https://globaltraining.app.axcelerate.com/api/course/resources>
 
- QUERY PARAMS: contactId
+QUERY PARAMS: contactId
 
  <details>
 
@@ -1800,8 +1801,8 @@ If the chat option is chosen, the system retrieves the learning resources linked
             }
         ]
     }
-</details>
 
+</details>
 
 Based on the provided data, a specific unit is identified by matching its ID within the UNITS array. Once the relevant unit object is retrieved, its RESOURCES array is accessed and processes only the supported file types—namely, PDF (.pdf), Microsoft Word (.doc), and Word Open XML (.docx)—for embedding purposes.
 
